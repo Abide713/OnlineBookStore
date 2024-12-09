@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bookStoreApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Book Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Book Store</div>
+        
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Books</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Welcome to Our Book Store!</h1>
+            <p>Your one-stop shop for top selling books.</p>
+            <nav class="additional-nav">
+                <h2 class="category-title">Shop by Category</h2>
+                <ul class="category-list">
+                    <li><a href="#children">Children</a></li>
+                    <li><a href="#young-adult">Young Adult</a></li>
+                    <li><a href="#poetry">Poetry</a></li>
+                    <li><a href="#fantasy">Fantasy</a></li>
+                </ul>
+            </nav>
+        </section>
+        
+
+        <!-- Dynamic Featured Books Section -->
+        <section ng-controller="BookController" class="category" id="featured">
+            <h2>Featured Books</h2>
+            <div class="product-card" ng-repeat="book in books | filter: {category: 'Featured'}">
+                <img ng-src="{{book.imageUrl}}" alt="{{book.title}}">
+                <h3>{{book.title}}</h3>
+                <p>{{book.price | currency}}</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </section>
+
+        <!-- Category Sections -->
+        <section  ng-controller="BookController" class="category" id="children">
+            <h2>Children</h2>
+            <div class="product-card" ng-repeat="book in books | filter: {category: 'Children'}">
+                <img ng-src="{{book.imageUrl}}" alt="{{book.title}}">
+                <h3>{{book.title}}</h3>
+                <p>{{book.price | currency}}</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </section>
+
+        <section ng-controller="BookController" class="category" id="young-adult">
+            <h2>Young Adult</h2>
+            <div class="product-card" ng-repeat="book in books | filter: {category: 'Young Adult'}">
+                <img ng-src="{{book.imageUrl}}" alt="{{book.title}}">
+                <h3>{{book.title}}</h3>
+                <p>{{book.price | currency}}</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </section>
+
+        <section ng-controller="BookController" class="category" id="poetry">
+            <h2>Poetry</h2>
+            <div class="product-card" ng-repeat="book in books | filter: {category: 'Poetry'}">
+                <img ng-src="{{book.imageUrl}}" alt="{{book.title}}">
+                <h3>{{book.title}}</h3>
+                <p>{{book.price | currency}}</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </section>
+
+        <section ng-controller="BookController" class="category" id="fantasy">
+            <h2>Fantasy</h2>
+            <div class="product-card" ng-repeat="book in books | filter: {category: 'Fantasy'}">
+                <img ng-src="{{book.imageUrl}}" alt="{{book.title}}">
+                <h3>{{book.title}}</h3>
+                <p>{{book.price | currency}}</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Book Store. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

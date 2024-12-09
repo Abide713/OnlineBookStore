@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #002147; /* Navy blue */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd; /* Subtle hover effect */
+    text-decoration: underline;
+}
+
+/* Main container layout */
+.main-container {
+    display: flex;
+}
+
+/* Additional navigation styling */
+.additional-nav {
+    text-align: center;
+    margin-top: 40px; /* Increased spacing from Shop Now button */
+}
+
+.additional-nav h2 {
+    font-size: 1.5rem;
+    color: #002147; /* Navy blue */
+    margin-bottom: 20px; /* Spacing below the heading */
+}
+
+.additional-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.additional-nav ul li {
+    margin: 0 10px; /* Horizontal spacing between categories */
+    display: inline; /* To display categories inline */
+}
+
+.additional-nav ul li a {
+    color: #002147;
+    text-decoration: none;
+    padding: 8px 0;
+}
+
+.additional-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+    background-color: #e6e6e6;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #002147; /* Navy blue */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #002147;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #00172e; /* Darker navy */
+}
+
+/* Product section */
+.products, .category {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 20px; /* Space between sections */
+}
+
+.products h2, .category h2 {
+    font-size: 2rem;
+    color: #002147;
+    margin-bottom: 30px;
+}
+
+.product-card {
+    display: inline-block;
+    width: 250px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    transform: scale(1.1);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.product-card .btn {
+    background-color: #002147;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .btn:hover {
+    background-color: #00172e;
+}
+
+/* Footer styling */
+footer {
+    background-color: #002147;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    border-top: 2px solid #ccc;
+}
+
+footer p {
+    margin: 0;
+}
+
+
